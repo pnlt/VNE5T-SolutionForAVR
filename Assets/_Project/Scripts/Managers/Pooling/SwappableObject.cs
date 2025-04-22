@@ -39,6 +39,12 @@ public class SwappableObject : MonoBehaviour
                 SwapModel(newPrefab == initialPrefab ? availablePrefabs[0] : initialPrefab));
         }
 
+        // Ensure the outline is disabled when the model is activated
+        Outline outline = newModel.GetComponent<Outline>();
+        if (outline != null) {
+            outline.enabled = false;
+        }
+
         // Activate the new model
         newModel.SetActive(true);
     }
