@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d468a9858d248e2847f8db08e341673, type: 3}
   m_Name: Chair2
   m_EditorClassIdentifier: 
-  name: Bar
+  name: BarChair
   material: wood
   price: 100000
   illustrativeImg: {fileID: 0}

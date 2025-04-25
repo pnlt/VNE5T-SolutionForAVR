@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "com.cysharp.r3": "https://github.com/Cysharp/R3.git?path=src/R3.Unity/Assets/R3.Unity",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.gitamend.improvedtimers": "git+https://github.com/adammyhre/Unity-Improved-Timers.git",
     "com.gitamend.unityutils": "git+https://github.com/adammyhre/Unity-Utils.git",
+    "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
     "com.kylewbanks.scenerefattribute": "git+https://github.com/KyleBanks/scene-ref-attribute.git",
+    "com.meta.xr.sdk.interaction.ovr": "74.0.3",
     "com.unity.2d.animation": "10.2.0",
     "com.unity.ai.navigation": "2.0.7",
     "com.unity.collab-proxy": "2.7.1",
@@ -15,6 +19,7 @@
     "com.unity.timeline": "1.8.8",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.6",
+    "com.unity.xr.hands": "1.5.1",
     "com.unity.xr.interaction.toolkit": "3.0.8",
     "com.unity.xr.management": "4.5.1",
     "com.unity.xr.openxr": "1.14.3",

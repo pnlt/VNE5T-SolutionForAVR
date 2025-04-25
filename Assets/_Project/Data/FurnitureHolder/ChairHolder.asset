@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureDataList:
   - {fileID: 4732105293332230306, guid: 205f98b5f439dd041b6eb21104ba9eee, type: 3}
+  - {fileID: 4732105293332230306, guid: 205f98b5f439dd041b6eb21104ba9eee, type: 3}
