@@ -18,7 +18,7 @@ public class Test : MonoBehaviour
 
     private void Update() {
         if (Keyboard.current.aKey.wasPressedThisFrame) {
-            originalChair.GetComponent<FurnitureModification>().Swap(chair.furnitureOwnership);
+            //originalChair.GetComponent<FurnitureModification>().Swap(chair.furnitureOwnership);
         }
     }
 }

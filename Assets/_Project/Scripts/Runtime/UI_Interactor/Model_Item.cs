@@ -7,11 +7,10 @@ public class Model_Item : MonoBehaviour
 {
     public Image modelImg;
     public ModelNameTxt name;
-    
+
     public Furniture furnitureOwnership;
-    
-    public void InitializeItem(Furniture furniture)
-    {
+
+    public void InitializeItem(Furniture furniture) {
         furnitureOwnership = furniture;
     }
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d468a9858d248e2847f8db08e341673, type: 3}
-  m_Name: Chair2
+  m_Name: Bar_Chair
   m_EditorClassIdentifier: 
-  name: BarChair
-  material: wood
-  price: 100000
+  name: Bar_Chair
+  material: Plastic
+  price: 200000
   illustrativeImg: {fileID: 0}
