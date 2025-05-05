@@ -8,12 +8,10 @@ public class Test : MonoBehaviour
     public Model_Item chair;
 
     public Chair originalChair;
-    private ObjectPooling<Chair> chairPool;
     private PoolManager poolManager;
 
 
     private void Start() {
-        chairPool = PoolManager.Instance.GetPool<Chair>();
     }
 
     private void Update() {

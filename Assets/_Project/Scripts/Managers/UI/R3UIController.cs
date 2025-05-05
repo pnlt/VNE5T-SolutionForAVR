@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Project.Scripts.Tests.Runtime.InteractiveFurniture;
 using R3;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public class R3UIController : MonoBehaviour
 
     private CompositeDisposable _disposables;
     private Dictionary<string, Canvas> _idToCanvasMap;
+    
 
     private void Awake() {
         _disposables = new CompositeDisposable();
@@ -37,7 +39,6 @@ public class R3UIController : MonoBehaviour
         if (InteractionEvents.Instance == null) {
             return;
         }
-
 
         // Subscribe to activation events
         InteractionEvents.Instance.OnActivate

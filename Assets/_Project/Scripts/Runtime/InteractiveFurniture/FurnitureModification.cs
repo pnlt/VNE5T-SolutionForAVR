@@ -8,6 +8,8 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
     {
         private ObjectPooling<Chair> chairPool;
         private Chair _ownedChair;
+        public delegate void FurnitureReference(FurnitureModification furnitureModification);
+        public static event FurnitureReference OnFurnitureReference;
 
         private void Awake() {
             _ownedChair = GetComponent<Chair>();
@@ -15,6 +17,11 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 
         private void Start() {
             chairPool = PoolManager.Instance.GetPool<Chair>();
+        }
+
+        public void SetFurnitureReference()
+        {
+            OnFurnitureReference?.Invoke(this);
         }
 
         public void Swap(Furniture newFurniture) {
