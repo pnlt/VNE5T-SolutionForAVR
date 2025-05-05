@@ -8,7 +8,9 @@ public class Model_Item : MonoBehaviour
     public Image modelImg;
     public ModelNameTxt name;
 
-    public Furniture furnitureOwnership;
+    private Furniture furnitureOwnership;
+    
+    public Furniture furniture => furnitureOwnership;
 
     public void InitializeItem(Furniture furniture) {
         furnitureOwnership = furniture;
