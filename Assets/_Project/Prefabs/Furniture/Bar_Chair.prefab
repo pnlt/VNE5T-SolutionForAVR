@@ -465,4 +465,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205abee3081b0ca40a6042e25e793411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  furnitureData: {fileID: 11400000, guid: c708e8b17deeeac468004075aa110920, type: 2}
+  chairData: {fileID: 11400000, guid: c708e8b17deeeac468004075aa110920, type: 2}

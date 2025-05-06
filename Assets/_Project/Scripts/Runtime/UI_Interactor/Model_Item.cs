@@ -12,9 +12,10 @@ public class Model_Item : MonoBehaviour
 
     public Furniture furniture => furnitureOwnership;
 
-    public void InitializeItem(Furniture furniture) {
+    public void InitializeItem(Furniture furniture)
+    {
         furnitureOwnership = furniture;
-        modelImg.sprite = furniture.Img;
-        name.SetModelName(furniture.Name);
+        modelImg.sprite = furniture.FurnitureData().IllustrativeImg;
+        name.SetModelName(furniture.FurnitureData().Name);
     }
 }

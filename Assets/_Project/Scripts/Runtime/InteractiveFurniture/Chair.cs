@@ -1,23 +1,22 @@
 using System;
 using _Project.Scripts.Tests.Runtime.InteractiveFurniture;
+using _Project.Scripts.Tests.Runtime.ScriptableObject;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
 public class Chair : Furniture
 {
-    public override Furniture GetAvailableFurniture()
+    [SerializeField] private ChairData chairData;
+
+    public override FurnitureData FurnitureData()
     {
-        return this;
+        return chairData;
     }
 
-    private void Start() {
+    public override void LoadData(FurnitureData furnitureData)
+    {
         
-        SetData();
     }
-    void SetData()
-    {
-        furnitureData.DisplayData(ref name, ref material, ref price, ref illustrativeImg);
 
-    }
 }

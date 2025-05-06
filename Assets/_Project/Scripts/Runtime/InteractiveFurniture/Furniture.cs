@@ -5,8 +5,6 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 {
     public abstract class Furniture : MonoBehaviour
     {
-        [SerializeField] protected FurnitureData furnitureData;
-
         protected string name;
         protected string material;
         protected string price;
@@ -14,7 +12,9 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 
         public string Name => name;
         public Sprite Img => illustrativeImg;
+        
+        public abstract FurnitureData FurnitureData();
 
-        public abstract Furniture GetAvailableFurniture();
+        public abstract void LoadData(FurnitureData furnitureData);
     }
 }
