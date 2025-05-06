@@ -14,6 +14,7 @@ namespace _Project.Scripts.Tests.Runtime.ScriptableObject
         [SerializeField] private string price;
 
         [SerializeField] private Sprite illustrativeImg;
+        
 
         public virtual void DisplayData(ref string name, ref string material, ref string price, ref Sprite illustrativeImg)
         {

@@ -9,10 +9,12 @@ public class Model_Item : MonoBehaviour
     public ModelNameTxt name;
 
     private Furniture furnitureOwnership;
-    
+
     public Furniture furniture => furnitureOwnership;
 
     public void InitializeItem(Furniture furniture) {
         furnitureOwnership = furniture;
+        modelImg.sprite = furniture.Img;
+        name.SetModelName(furniture.Name);
     }
 }

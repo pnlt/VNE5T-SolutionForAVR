@@ -8,13 +8,11 @@ namespace _Project.Scripts.Tests.Runtime.UI_Interactor
     {
         [SerializeField] private TextMeshProUGUI modelName;
 
-        private void Awake()
-        {
+        private void Awake() {
             modelName = GetComponent<TextMeshProUGUI>();
         }
 
-        private void SetModelName(string name)
-        {
+        public void SetModelName(string name) {
             modelName.text = name;
         }
     }

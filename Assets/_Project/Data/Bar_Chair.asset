@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Bar_Chair
   material: Plastic
   price: 200000
-  illustrativeImg: {fileID: 0}
+  illustrativeImg: {fileID: 21300000, guid: aa1e07d3e3ba968489f3cba3bbe76b41, type: 3}

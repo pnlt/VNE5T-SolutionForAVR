@@ -11,8 +11,9 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
         protected string material;
         protected string price;
         protected Sprite illustrativeImg;
-        
+
         public string Name => name;
+        public Sprite Img => illustrativeImg;
 
         public abstract Furniture GetAvailableFurniture();
     }
