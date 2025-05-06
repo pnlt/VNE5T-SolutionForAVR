@@ -5,24 +5,27 @@ using UnityEngine;
 public class ItemEvent : MonoBehaviour
 {
     [SerializeField] private FurnitureModification furnitureModification;
-    private ModelListHandle modelListHandle;
     private Model_Item item;
-    
-    
 
-    private void Awake()
-    {
+
+    private void Awake() {
         item = GetComponent<Model_Item>();
-        modelListHandle = GetComponentInParent<ModelListHandle>();
     }
 
-    private void Start()
-    {
-        furnitureModification = modelListHandle.furnitureModification;
+    private void OnEnable() {
+        FurnitureModification.OnFurnitureReference += SetFurnitureModification;
     }
 
-    public void OnClicked()
-    {
+    private void SetFurnitureModification(FurnitureModification furnituremodification) {
+        this.furnitureModification = furnituremodification;
+    }
+
+    public void OnClicked() {
         furnitureModification.Swap(item.furniture);
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable() {
+        FurnitureModification.OnFurnitureReference -= SetFurnitureModification;
     }
 }

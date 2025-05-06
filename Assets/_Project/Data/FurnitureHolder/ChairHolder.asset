@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ChairHolder
   m_EditorClassIdentifier: 
   furnitureDataList:
-  - {fileID: 6597752601192454197, guid: e4a1db24460f212478bd86ae3d6c329f, type: 3}
+  - {fileID: 5887437446544439731, guid: e4a1db24460f212478bd86ae3d6c329f, type: 3}
