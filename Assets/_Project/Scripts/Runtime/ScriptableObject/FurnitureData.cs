@@ -8,20 +8,16 @@ namespace _Project.Scripts.Tests.Runtime.ScriptableObject
         [SerializeField] private string name;
     
         [Tooltip( "Material of furniture (wood, steel, ...)" )]
-        [SerializeField] public string material;
+        [SerializeField] private string material;
     
         [Tooltip( "Price of furniture" )]
         [SerializeField] private string price;
 
         [SerializeField] private Sprite illustrativeImg;
         
-
-        public virtual void DisplayData(ref string name, ref string material, ref string price, ref Sprite illustrativeImg)
-        {
-            name = this.name;
-            material = this.material;
-            price = this.price;
-            illustrativeImg = this.illustrativeImg;
-        }
+        public string Name => name;
+        public string Material => material;
+        public string Price => price;
+        public Sprite IllustrativeImg => illustrativeImg;
     }
 }

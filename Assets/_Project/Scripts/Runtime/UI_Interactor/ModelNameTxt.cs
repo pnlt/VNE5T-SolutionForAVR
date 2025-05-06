@@ -12,7 +12,8 @@ namespace _Project.Scripts.Tests.Runtime.UI_Interactor
             modelName = GetComponent<TextMeshProUGUI>();
         }
 
-        public void SetModelName(string name) {
+        public void SetModelName(string name)
+        {
             modelName.text = name;
         }
     }
