@@ -1,31 +1,39 @@
-using System;
 using _Project.Scripts.Tests.Runtime.InteractiveFurniture;
 using UnityEngine;
 
+public struct GetFurnitureSwap : IEvent
+{
+    public IFurnitureSwap furnitureSwap;
+    public GetFurnitureSwap(IFurnitureSwap furnitureSwap) {
+        this.furnitureSwap = furnitureSwap;
+    }
+}
+
 public class ItemEvent : MonoBehaviour
 {
-    [SerializeField] private FurnitureModification furnitureModification;
+    private IFurnitureSwap furnitureModification;
     private Model_Item item;
+    private EventBinding<GetFurnitureSwap> getFurnitureEvent;
 
 
     private void Awake() {
         item = GetComponent<Model_Item>();
+        getFurnitureEvent = new EventBinding<GetFurnitureSwap>(SetFurnitureModification);
     }
 
     private void OnEnable() {
-        FurnitureModification.OnFurnitureReference += SetFurnitureModification;
+        EventBus<GetFurnitureSwap>.Register(getFurnitureEvent);
     }
 
-    private void SetFurnitureModification(FurnitureModification furnituremodification) {
-        this.furnitureModification = furnituremodification;
+    private void SetFurnitureModification(GetFurnitureSwap furnitureModification) {
+        this.furnitureModification = furnitureModification.furnitureSwap;
     }
 
     public void OnClicked() {
         furnitureModification.Swap(item.furniture);
-        gameObject.SetActive(false);
     }
 
     private void OnDisable() {
-        FurnitureModification.OnFurnitureReference -= SetFurnitureModification;
+        EventBus<GetFurnitureSwap>.Deregister(getFurnitureEvent);
     }
 }

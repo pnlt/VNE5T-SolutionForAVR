@@ -13,24 +13,31 @@ public class R3UIController : MonoBehaviour
     {
         public string interactableId;
         public Canvas uiCanvas;
+        public SkinnedMeshRenderer meshRenderer;
     }
 
     [SerializeField] private List<InteractableUIMapping> uiMappings = new();
     [SerializeField] private bool hideUIOnDeactivate = true;
 
     private CompositeDisposable _disposables;
-    private Dictionary<string, Canvas> _idToCanvasMap;
-    
+    private Dictionary<string, InteractableUIMapping> _idToMappingMap;
+
 
     private void Awake() {
         _disposables = new CompositeDisposable();
-        _idToCanvasMap = new Dictionary<string, Canvas>();
+        _idToMappingMap = new Dictionary<string, InteractableUIMapping>();
 
         // Build lookup dictionary for performance
         foreach (var mapping in uiMappings) {
             if (mapping.uiCanvas != null) {
                 mapping.uiCanvas.enabled = false;
-                _idToCanvasMap[mapping.interactableId] = mapping.uiCanvas;
+
+                // Also disable the mesh renderer if it exists
+                if (mapping.meshRenderer != null) {
+                    mapping.meshRenderer.enabled = false;
+                }
+
+                _idToMappingMap[mapping.interactableId] = mapping;
             }
         }
     }
@@ -42,22 +49,43 @@ public class R3UIController : MonoBehaviour
 
         // Subscribe to activation events
         InteractionEvents.Instance.OnActivate
-            .Where(data => _idToCanvasMap.ContainsKey(data.InteractableId))
-            .Subscribe(data => { _idToCanvasMap[data.InteractableId].enabled = true; })
+            .Where(data => _idToMappingMap.ContainsKey(data.InteractableId))
+            .Subscribe(data =>
+            {
+                var mapping = _idToMappingMap[data.InteractableId];
+                mapping.uiCanvas.enabled = true;
+
+                // Enable the mesh renderer if it exists
+                if (mapping.meshRenderer != null) {
+                    mapping.meshRenderer.enabled = true;
+                }
+            })
             .AddTo(_disposables);
 
         // Subscribe to deactivation events if needed
         if (hideUIOnDeactivate) {
             InteractionEvents.Instance.OnDeactivate
-                .Where(data => _idToCanvasMap.ContainsKey(data.InteractableId))
-                .Subscribe(data => { _idToCanvasMap[data.InteractableId].enabled = false; })
+                .Where(data => _idToMappingMap.ContainsKey(data.InteractableId))
+                .Subscribe(data =>
+                {
+                    var mapping = _idToMappingMap[data.InteractableId];
+                    mapping.uiCanvas.enabled = false;
+                    // Disable the mesh renderer if it exists
+                    if (mapping.meshRenderer != null) {
+                        mapping.meshRenderer.enabled = false;
+                    }
+                })
                 .AddTo(_disposables);
         }
     }
 
     public void HideUI(string interactableId) {
-        if (_idToCanvasMap.TryGetValue(interactableId, out Canvas canvas)) {
-            canvas.enabled = false;
+        if (_idToMappingMap.TryGetValue(interactableId, out InteractableUIMapping mapping)) {
+            mapping.uiCanvas.enabled = false;
+            // Disable the mesh renderer if it exists
+            if (mapping.meshRenderer != null) {
+                mapping.meshRenderer.enabled = false;
+            }
         }
     }
 

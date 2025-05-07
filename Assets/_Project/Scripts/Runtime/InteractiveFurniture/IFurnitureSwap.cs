@@ -1,7 +1,9 @@
 namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 {
-    public interface IFurnitureSwap 
+    public interface IFurnitureSwap
     {
         void Swap(Furniture newFurniture);
+
+        public void SetFurnitureReference();
     }
 }
