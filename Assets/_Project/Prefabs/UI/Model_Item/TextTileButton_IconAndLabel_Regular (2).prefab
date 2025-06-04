@@ -835,4 +835,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd75bc5d82cd6a45b484a1e92838f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  furnitureModification: {fileID: 0}

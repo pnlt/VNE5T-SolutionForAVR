@@ -1,4 +1,3 @@
-using System;
 using _Project.Scripts.Tests.Runtime.DesignPattern.ObjectPooling;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 {
     public class ChairModification : MonoBehaviour, IFurnitureSwap
     {
-        private ObjectPooling<Chair> chairPool;
+        private FurniturePooling<Chair> chairPool;
         private Chair _ownedChair;
 
         private void Awake() {
@@ -19,7 +18,7 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 
         public void Swap(Furniture newFurniture) {
             // TODO - Swap respective type of Furniture    
-            var swappedChair = chairPool.GetObjectPooling(newFurniture, newFurniture.GetComponent<Chair>());
+            var swappedChair = chairPool.GetObjectPooling<Chair>(newFurniture);
 
             chairPool.ReturnObjectPooling(_ownedChair);
             swappedChair.transform.position = transform.position;

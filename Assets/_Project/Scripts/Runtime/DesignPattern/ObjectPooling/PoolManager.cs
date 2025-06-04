@@ -23,15 +23,15 @@ namespace _Project.Scripts.Tests.Runtime.DesignPattern.ObjectPooling
             }
         }
 
-        public ObjectPooling<T> GetPool<T>() where T : Component
+        public FurniturePooling<T> GetPool<T>() where T : Component
         {
             var key = typeof(T);
             if (!poolObjects.TryGetValue(key, out var value))
             {
-                poolObjects.Add(typeof(T), new ObjectPooling<T>());
+                poolObjects.Add(typeof(T), new FurniturePooling<T>());
             }
             
-            return poolObjects[key] as ObjectPooling<T>;
+            return poolObjects[key] as FurniturePooling<T>;
         }
     }
 }

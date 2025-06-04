@@ -6,7 +6,7 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 {
     public class TableModification : MonoBehaviour, IFurnitureSwap
     {
-        private ObjectPooling<Table> tablePool;
+        private FurniturePooling<Table> tablePool;
         private Table _ownedTable;
 
         private void Awake() {
@@ -23,7 +23,7 @@ namespace _Project.Scripts.Tests.Runtime.InteractiveFurniture
 
         public void Swap(Furniture newFurniture) {
             // TODO - Swap respective type of Furniture    
-            var swappedTable = tablePool.GetObjectPooling(newFurniture, newFurniture.GetComponent<Table>());
+            var swappedTable = tablePool.GetObjectPooling<Table>(newFurniture);
 
             tablePool.ReturnObjectPooling(_ownedTable);
             swappedTable.transform.position = transform.position;
