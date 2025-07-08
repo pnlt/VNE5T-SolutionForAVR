@@ -1,21 +1,212 @@
-MIT License
+ACADEMIC RESEARCH LICENSE
 
-Copyright (c) 2025 NGUYỄN LÊ TẤT PHÚ
+VR Interior Design Studio - AI-Enhanced Virtual Reality for Interior Design
+Copyright (c) 2024 Nguyen Le Tat Phu, Doan Cat Phu
+All Rights Reserved
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+================================================================================
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+ACADEMIC RESEARCH LICENSE AGREEMENT
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+This software and associated documentation files (the "Software") are provided 
+under the terms of this Academic Research License Agreement ("License"). By 
+accessing, downloading, or using the Software, you agree to be bound by the 
+terms of this License.
+
+================================================================================
+
+1. GRANT OF LICENSE
+
+Subject to the terms and conditions of this License, the copyright holders 
+hereby grant you a limited, non-exclusive, non-transferable license to use 
+the Software solely for:
+
+   a) Academic research in interior design, architecture, and VR technology
+   b) Educational activities within accredited institutions
+   c) Peer review and reproducibility verification
+   d) Reference and study for scholarly work in design and technology
+   e) Scientific study of VR applications in creative domains
+
+2. RESTRICTIONS
+
+You may NOT:
+
+   a) Use the Software for commercial interior design services
+   b) Deploy the Software in production environments for design firms
+   c) Distribute, sublicense, or sell copies of the Software
+   d) Create derivative works for commercial interior design applications
+   e) Use the Software for client projects or paid design services
+   f) Remove or alter any copyright notices or this License
+   g) Use the Software for any purpose other than academic research
+   h) Reverse engineer, decompile, or disassemble the Software for 
+      commercial purposes
+   i) Integrate the Software into commercial design tools or platforms
+
+3. RESEARCH PUBLICATION CONTEXT
+
+This Software was developed as part of academic research for publication in 
+interior design technology and VR journals. The Software is provided to support:
+
+   - Research reproducibility in VR and design technology
+   - Peer review processes in academic publications
+   - Academic collaboration in design and technology research
+   - Educational advancement in interior design and VR applications
+   - Scientific study of AI applications in creative domains
+
+4. ATTRIBUTION REQUIREMENTS
+
+If you use this Software in your research, you MUST:
+
+   a) Provide proper citation to the original research paper
+   b) Include this License notice in any distribution
+   c) Acknowledge the original authors in any publications
+   d) Clearly indicate any modifications made to the original Software
+   e) Reference the academic context of the research
+
+   Suggested citation format:
+   
+   Nguyen Le Tat Phu, Doan Cat Phu. "AI-Enhanced Virtual Reality for Interior 
+   Design: A Study of Immersive Design Environments and Personalization Systems." 
+   Journal of Interior Design Technology, 2024.
+
+5. MODIFICATIONS
+
+You may modify the Software for academic research purposes only, provided that:
+
+   a) All modifications are clearly documented
+   b) The original copyright notice is preserved
+   c) Modified versions are not distributed outside academic contexts
+   d) Any publications using modified versions cite the original work
+   e) Modifications are used solely for research advancement
+
+6. DISTRIBUTION
+
+Distribution of the Software is permitted only:
+
+   a) Within academic institutions for educational purposes
+   b) To fellow researchers for collaborative academic work
+   c) For peer review processes in academic journals
+   d) When accompanied by this complete License
+   e) For research conferences and academic presentations
+
+7. SPECIFIC RESTRICTIONS FOR DESIGN APPLICATIONS
+
+Given the nature of this interior design application, you specifically may NOT:
+
+   a) Use the Software to provide design services to clients
+   b) Generate commercial design proposals or presentations
+   c) Integrate the Software into commercial design workflows
+   d) Use the AI recommendation system for commercial purposes
+   e) Modify the Software for commercial interior design tools
+   f) Use the Software's assets or models for commercial projects
+
+8. DISCLAIMER OF WARRANTIES
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 SOFTWARE.
+
+9. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+10. TERMINATION
+
+This License is effective until terminated. Your rights under this License 
+will terminate automatically without notice if you fail to comply with any 
+term(s) of this License. Upon termination, you must cease all use of the 
+Software and destroy all copies in your possession.
+
+11. RESEARCH COLLABORATION
+
+The copyright holders encourage academic collaboration and may consider 
+special arrangements for:
+
+   a) Joint research projects with accredited institutions
+   b) Collaborative studies in interior design and VR technology
+   c) Educational partnerships for teaching and learning
+   d) Conference presentations and academic demonstrations
+
+Contact the research team for collaboration opportunities.
+
+12. GOVERNING LAW
+
+This License shall be governed by and construed in accordance with the laws 
+of Vietnam, without regard to its conflict of laws principles.
+
+13. ENTIRE AGREEMENT
+
+This License constitutes the entire agreement between you and the copyright 
+holders regarding the Software and supersedes all prior or contemporaneous 
+understandings regarding such subject matter.
+
+14. CONTACT INFORMATION
+
+For licensing inquiries, academic collaboration, or permission requests:
+
+   Primary Contact: Nguyen Le Tat Phu
+   Email: research@vrinteriordesign.com
+   Institution: [Your University]
+   Department: [Your Department]
+   
+   Secondary Contact: Doan Cat Phu
+   Email: collaborate@vrinteriordesign.com
+   Institution: [Your University]
+
+================================================================================
+
+COMMERCIAL USE NOTICE
+
+This Software is NOT licensed for commercial use. Any commercial use, including 
+but not limited to:
+
+- Interior design services
+- Commercial design consultations
+- Revenue-generating design applications
+- Production deployment for design firms
+- Commercial AI recommendation services
+- Integration into commercial design tools
+- Client project development
+
+Requires explicit written permission from the copyright holders and may be 
+subject to separate licensing terms and fees.
+
+For commercial licensing inquiries, contact: research@vrinteriordesign.com
+
+================================================================================
+
+ACADEMIC INSTITUTION NOTICE
+
+Academic institutions wishing to use this Software for:
+
+- Course curricula in interior design or VR technology
+- Student projects and assignments
+- Research laboratory demonstrations
+- Educational conferences and workshops
+
+Should contact the research team for appropriate academic use guidelines and 
+potential collaboration opportunities.
+
+================================================================================
+
+END OF LICENSE TERMS
+
+By using this Software, you acknowledge that you have read this License, 
+understand it, and agree to be bound by its terms and conditions.
+
+This License specifically addresses the unique considerations of interior 
+design applications, AI systems, and VR technology in academic research contexts.
+
+Last Updated: December 2024
+Version: 1.0
+Research Project: VR Interior Design Studio
