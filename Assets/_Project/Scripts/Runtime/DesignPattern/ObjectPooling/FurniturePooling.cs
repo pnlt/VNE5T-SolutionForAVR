@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using _Project.Scripts.Tests.Runtime.InteractiveFurniture;
 using UnityEngine;
@@ -6,29 +7,29 @@ using Object = UnityEngine.Object;
 
 namespace _Project.Scripts.Tests.Runtime.DesignPattern.ObjectPooling
 {
-    public class ObjectPooling<T> where T : Component
+    public class FurniturePooling<T> where T : Component
     {
-        //private T prefabs;
         private GameObject poolManager;
         
-        private Dictionary<Furniture, List<T>> poolObjects;
+        private Dictionary<Type, List<Furniture>> poolObjects;
         private GameObject typePooling;
         
-        public ObjectPooling()
+        public FurniturePooling()
         {
             poolObjects = new();
             poolManager = GameObject.FindGameObjectWithTag("Pooling");
         }
 
-        public T GetObjectPooling(Furniture furniture, T prefab)
+        public Furniture GetObjectPooling<TFurniture>(Furniture prefab) where TFurniture : T
         {
-            if (poolObjects.Count == 0)
+            var furniture = typeof(TFurniture);
+            if (!poolObjects.ContainsKey(furniture))
             {
                 typePooling = new GameObject(typeof(T).FullName + "Pooling");
                 typePooling.transform.SetParent(poolManager.transform);
             }
             
-            T retrievedGO = null;
+            Furniture retrievedGO = null;
             if (poolObjects.TryGetValue(furniture, out var listObj))
             {
                 foreach (var @object in listObj)
@@ -43,7 +44,7 @@ namespace _Project.Scripts.Tests.Runtime.DesignPattern.ObjectPooling
             }
             else
             {
-                poolObjects.Add(furniture, new List<T>());;
+                poolObjects.Add(furniture, new List<Furniture>());;
             }
             
             if (retrievedGO == null)
@@ -54,7 +55,7 @@ namespace _Project.Scripts.Tests.Runtime.DesignPattern.ObjectPooling
             return retrievedGO;
         }
 
-        private T SpawnObjectPooling(Furniture furniture, T prefab)
+        private Furniture SpawnObjectPooling(Type furniture, Furniture prefab)
         {
             var newGO = Object.Instantiate(prefab, typePooling.transform);
             newGO.name = prefab.name;
